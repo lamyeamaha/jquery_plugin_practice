@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--meta tags-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--plugin--> 
+  <link rel="stylesheet" href="assets/wow/css/animate.css"> <!--for the first wow plugin, this is the css link up-->
+  <link rel="stylesheet" href="assets/text_scroller/eocjs-newsticker.css"> <!--this is the css file link up for the text scroller-->
+
+  <!--CSS Links-->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>JQuery Plugins</title>
+</head>
+<body>
+  <!--header start-->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand white" href="#">jQuery Plugin</a>
+      <button class="navbar-toggler bg_white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">1st page<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="second_page.html">2nd Page</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="third_page.html">3rd Page</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="fourth_page.html">4th Page</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="fifth_page.html">5th Page</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+  </header>
+  <!--header end-->
+  <!--counterup plugin start-->
+  <section class="pink">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="wrapper text-center">
+            <h1 class="counter">12345678</h1>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="wrapper text-center">
+            <h1 class="counter">50000</h1>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="wrapper text-center">
+            <h1 class="counter">345234</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--counterup plugin end-->
+  <!--wow js plugin, class: fadeInRight start-->
+  <section class="wow fadeInRight orange text-center" data-wow-duration="3s">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-5">
+          <div class="wrapper ">
+            <h1>This is wow js plugin-- class: fadeInRight</h1>
+            <p>Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--wow js plugin, class: fadeInRight end-->
+  <!--wow js plugin, class: slideInDown start-->
+  <section class="wow slideInDown purple" data-wow-duration="2s">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-5">
+          <div class="wrapper ">
+            <h1>This is wow js plugin-- class: <u>slideInDown</u></h1>
+            <p>Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--wow js plugin, class: zoomIn end-->
+  <!--jqueryscript.net plugin text-scroller start-->
+  <section class="light_orange">
+    <div class="container">
+      <div class="wrapper">
+        <p id="text_sliding">This will keep sliding.</p>
+      </div>
+    </div>
+  </section>
+  <!--jqueryscript.net plugin text-scroller end-->
+
+
+
+  <!--JS Links -->
+  <script src="js/jquery.min.js"></script> <!--for counterup plugin(from github) we need to use the stable 1.12.4 version of js. you can only use ONE js file eiter the 3.5.1 version or this 1.12.4 version-->
+  <!--plugin start-->
+  <script src="assets/counter/waypoints.min.js"></script>
+  <script src="assets/counter/jquery.counterup.min.js"></script>
+  <script src="assets/wow/js/wow.min.js"></script>
+  <script src="assets/text_scroller/eocjs-newsticker.js"></script>
+  <!--plugin end-->
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    $(document).ready(function(){
+        // counterup plugin(this is the activation code)
+        $('.counter').counterUp({
+          delay: 10,    //by default, you can also "not" use these parameters
+          time: 1000
+        });
+        //wow js plugin
+        new WOW().init(); //instead of this, you could use the larger activation code in the 'advanced usage' given in github or in the wow.js documentaion.
+        //text-scroller plugin from jqueryscript.net:
+        $("#text_sliding").eocjsNewsticker({
+          speed:20,   //animation speed
+          timeout:1,   // time to wait before starting
+          divider:'+++'  //divider between text/news
+        });
+
+      });
+
+
+
+    </script>
+  </body>
+  </html>

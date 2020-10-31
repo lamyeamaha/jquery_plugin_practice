@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--plugin-->
+    <link rel="stylesheet" href="assets/wow/css/animate.css">
+
+    <!--CSS Links-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>2nd Page</title>
+  </head>
+  <body>
+      <!--header start-->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand white" href="#">jQuery Plugin</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="second_page.html">2nd Page</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="third_page.html">3rd Page</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="fourth_page.html">4th Page</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="fifth_page.html">5th Page</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </nav>
+  </header>
+  <!--header end-->
+    <!--halloween bats plugin start-->
+    <section class="halloweenBats orange" id="bats_section">
+      <div class="wrapper">
+        <h1 class="text-center">Halloween Bats</h1>
+      </div>
+    </section>
+    <!--halloween bats plugin end-->
+    <!--blinking text start-->
+    <section class="pink">
+      <div class="container">
+        <div class="wrapper">
+          <h1 class="demo text-center">This is a blinking heading</h1>
+        </div>
+      </div>
+    </section>
+    <!--blinking text end-->
+
+    <!--smooth scroll downwards plugin start-->
+    <section class="salmon">
+      <div class="container">
+        <div class="wrapper" id="target">
+          <p class="text-center">This is the top</p>
+        </div>
+        <div class="large_box"></div>
+        <button id="trigger" data-smoothytarget="#target">Back to top</button>
+      </div>
+    </section>
+    <!--smooth scroll downwards plugin end-->
+    <!--bounce in plugin using animate.css start-->
+    <section class="wow rotateIn light_orange" data-wow-duration="2s">
+      <div class="container black">
+
+      </div>
+    </section>
+    <!--bounce in plugin using animate.css end-->
+    
+    <!--JS Links -->
+    <script src="js/jquery.min.js"></script>
+    <!--plugin start-->
+    <script src="assets/halloween-bats-flying-around/halloween-bats.js"></script>
+    <script src="assets/blinking-text-effect/jblink.js"></script>
+    <script src="assets/smooth-scroll-downwards/smooth-scroll.js"></script>
+    <script src="assets/wow/js/wow.min.js"></script>
+    <!--plugin end-->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      $(document).ready(function(){
+        //holloween bats plugin start
+        window.halloweenBats = $.halloweenBats({
+          image:'assets/halloween-bats-flying-around/bats.png',
+          amount: 15,
+          width: 35,
+          frames: 4,
+          speed: 20,
+          flickering: 15,
+          target: '#bats_section'
+        }); 
+        //blinking text plugin start
+        $('.demo').jBlink({
+          duration:500,
+          times: 0
+        });
+        //smooth scroll plugin start
+        makeItRealSmooth($("#trigger"),1000,50);
+        new WOW().init();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--meta tags-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--plugin-->
+
+
+  <!--CSS Links-->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Fourth Page</title>
+</head>
+<body>
+  <!--header start-->
+  <header>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand white" href="#">jQuery Plugin</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="second_page.html">2nd Page</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="third_page.html">3rd Page</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="fourth_page.html">4th Page</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="fifth_page.html">5th Page</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+  </header>
+  <!--header end-->
+  <!--Flying particles plugin start-->
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="black moving-circles"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--flying particles plugin end-->
+  <!--firefly plugin start-->
+  <section id="firefly">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="black"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--firefly plugin end-->
+  <!--sparkling start-->
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="example">
+            <img id="bird" src="assets/sparkling_stars/images/bird.jpg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--sparkling end-->
+
+  
+  <!--JS Links -->
+  <script src="js/jquery.min.js"></script>
+  <!--plugin start-->
+  <script src="assets/particle-system-flying-circles/jquery.flying-circles.js"></script>
+  <script src="assets/Animated-Firefly-Effect/jquery.firefly-0.7.min.js"></script>
+  <script src="assets/sparkling_stars/js/jquery-canvas-sparkles.min.js"></script>
+  <!--plugin end-->
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    $(document).ready(function(){
+        //flying particle
+        Dots.generate();
+        //firefly plugin
+        $.firefly({
+          on: '#firefly',
+          maxPixel: 5,
+          total: 30
+        });
+        //sparkling plugin
+        $('#bird').sparkle();
+
+      });
+    </script>
+  </body>
+  </html>

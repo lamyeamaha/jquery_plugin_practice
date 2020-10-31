@@ -1,0 +1,71 @@
+/*this is your custon style. not mandatory*/
+header{
+	padding: 20px 0 20px 0;
+	background-color: black;
+}
+.white{
+	color:white  !important;
+}
+.menu ul li a{
+	margin: 0 25px 0 25px !important;
+	color:white !important;
+	transition:.3s;
+	display: inline-block;
+}
+.menu ul li a:hover{
+	transform: scale(2,2);
+}
+.bg_white{
+	background-color: white;
+}
+section{
+	margin: 25px 0 25px 0;
+}
+.pink{
+	background-color: pink;
+}
+h1{
+	font-size: 25px;
+}
+.orange{
+	background-color: orange;
+	padding: 100px 0 100px 0;
+}
+.purple{
+	background-color:purple;
+}
+.light_orange{
+	background-color:#bb8073;
+}
+#text_sliding{
+	background-color: #97b9a6;
+}
+.large_box{
+	min-height: 1000px;
+	background-color: purple;
+}
+.salmon{
+	background-color: salmon;
+}
+.black{
+	min-width: 200px;
+	min-height: 200px;
+	background-color:black;
+}
+#particle{
+	background-color:black;
+	min-height: 800px;
+}
+.ripple{
+	min-height: 400px;
+}
+.twinkling{
+	background-color: black;
+	min-height: 400px;
+}
+.grey{
+	background-color:grey;
+}
+.custom_chibi{
+	min-height: 500px;
+}
